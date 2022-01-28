@@ -3,3 +3,7 @@ function Route() {
     this.init;
     this.end;
 }
+
+module.exports = {
+    Route: Route
+}

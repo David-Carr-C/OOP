@@ -1,9 +1,8 @@
 <?php
 
-class Payment {
-    public $id;
+class Tarjeta extends Payment {
     public function __construct($id) {
-        $this->id = $id;
+        parent::__construct($id);
     }
 }
 

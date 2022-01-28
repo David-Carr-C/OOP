@@ -1,4 +1,4 @@
-const {Car} = require("./Car");
+var {Car} = require("./Car");
 
 function UberPool(license, driver, brand, model) {
     this.brand = brand;

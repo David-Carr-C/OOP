@@ -1,4 +1,4 @@
-const {Car} = require("./Car");
+var {Car} = require("./Car");
 
 function UberVan(license, driver, typeCarAccepted, seatsMaterial) {
     this.typeCarAccepted = typeCarAccepted;
