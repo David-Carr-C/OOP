@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 class Main {
     public static void main(String[] args) {
         // Prueba
@@ -16,8 +20,14 @@ class Main {
         System.out.println(uber.getDataCar());
 
 
-        UberPool uberSecond = new UberPool("DDDDDDCCC10", new Account("Daniela", "DA10NIE10LA"), "Dodge", "Attitude");
+        UberPool uberSecond = new UberPool("DDDDCCC10", new Account("Daniela", "DA10NIE10LA"), "Dodge", "Attitude");
         uberSecond.setPassenger(4);
         System.out.println(uberSecond.getDataCar());
+
+        Map<String, Map<String,Integer>> typeCarAccepted = new HashMap<String, Map<String,Integer>>();
+        ArrayList<String> seatsMaterial = new ArrayList<String>();
+        UberVan uberThird = new UberVan("AW10AW10", new Account("David", "DADA1010"), typeCarAccepted, seatsMaterial);
+        uberThird.setPassenger(6);
+        System.out.println(uberThird.getDataCar());
     }
 }

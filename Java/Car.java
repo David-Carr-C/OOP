@@ -1,8 +1,8 @@
 public class Car {
-    int id;
-    String license;
-    Account driver; /*<- se cambia el tipo String driver;*/
-    private int passenger;
+    private int id;
+    private String license;
+    private Account driver; /*<- se cambia el tipo String driver;*/
+    protected int passenger;
 
     public Car(String license, Account driver) { /*Hay 3 metodos constructores: Default, Constructor y Copia */
         this.license = license;
@@ -13,11 +13,7 @@ public class Car {
         if (license!=null && driver.name!=null && passenger!=0) {
             return "License: " + license + ", Driver: "+ driver.name + ", Passenger: " + passenger;
         }
-        return "Error!, please, set var \"passenger\" as 4";
-    }
-
-    public String getLicense() {
-        return license;
+        return "Error!";
     }
 
     public int getPassenger() {
@@ -28,7 +24,23 @@ public class Car {
         if (passenger==4) {
             this.passenger = passenger;
         } else {
-            System.out.println("Invalid number");
+            System.out.println("Invalid number, please, set var \"passenger\" as 4");
         }
+    }
+
+    public String getLicense() {
+        return license;
+    }
+
+    public void setLicense(String license) {
+        this.license = license;
+    }
+
+    public Account getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Account driver) {
+        this.driver = driver;
     }
 }

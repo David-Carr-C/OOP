@@ -10,4 +10,18 @@ public class UberVan extends Car{
         this.typeCarAccepted = typeCarAccepted;
         this.seatsMaterial = seatsMaterial;
     }
+
+    @Override
+    public void setPassenger(int passenger) {
+        if (passenger==6) {
+            this.passenger = passenger;
+        } else {
+            System.out.println("Invalid number!, please set 6 passengers!");
+        }
+    }
+
+    @Override
+    public String getDataCar() {
+        return super.getDataCar()+", TypeCarAccepted: "+typeCarAccepted+", Seat Material: "+seatsMaterial;
+    }
 }

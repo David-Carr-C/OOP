@@ -9,4 +9,9 @@ class UberPool extends Car {
         $this->brand = $brand;
         $this->model = $model;
     }
+
+    public function getDataCar() {
+        $parentData = parent::getDataCar();
+        return "$parentData, Brand: $this->brand, Model: $this->model, Passenger: $this->passenger";
+    }
 }
