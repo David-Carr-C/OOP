@@ -7,4 +7,12 @@ public class UberX extends Car{
         this.brand = brand;
         this.model = model;
     }
+
+    @Override
+    public String getDataCar() {
+        if (model!=null && brand!=null) {
+            return super.getDataCar() + ", Brand: " + brand + ", Model: "+ model;
+        } 
+        return "Error!";
+    }
 }

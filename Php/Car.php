@@ -12,7 +12,10 @@ class Car{
     }
 
     public function getDataCar() {
-        return "License: $this->license, Driver: {$this->driver->name}, Document: {$this->driver->document}";
+        if ($this->passenger!=null && $this->license!=null && $this->driver->name && $this->driver->document!=null)
+            return "License: $this->license, Driver: {$this->driver->name}, Document: {$this->driver->document}, Passenger: $this->passenger";
+        else
+            return "Error!";
     }
 
     public function getPassenger() {

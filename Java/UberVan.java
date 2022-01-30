@@ -22,6 +22,9 @@ public class UberVan extends Car{
 
     @Override
     public String getDataCar() {
-        return super.getDataCar()+", TypeCarAccepted: "+typeCarAccepted+", Seat Material: "+seatsMaterial;
+        if (typeCarAccepted!=null && seatsMaterial!=null) {
+            return super.getDataCar()+", TypeCarAccepted: "+typeCarAccepted+", Seat Material: "+seatsMaterial;
+        }
+        return "Error!";
     }
 }

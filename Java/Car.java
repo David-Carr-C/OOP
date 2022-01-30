@@ -9,7 +9,7 @@ public class Car {
         this.driver = driver;
     }
 
-    String getDataCar() {
+    public String getDataCar() {
         if (license!=null && driver.name!=null && passenger!=0) {
             return "License: " + license + ", Driver: "+ driver.name + ", Passenger: " + passenger;
         }

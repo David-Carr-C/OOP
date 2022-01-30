@@ -11,13 +11,14 @@ require_once("./UberVan.php");
 
 # Test
 $car = new Car("AWS123", new Account("Daniela", "DA12NI12ELA"));
-
+$car->setPassenger(2);
 echo $car->getDataCar();
 echo "<br>";
 
 #UberX Creation
-$uberFirst = new UberX("AWS1010", new Account("Daniela", "DA12NI12ELA"), "Chevrolet", "Spark");
-echo $uberFirst->getDataCar();
+$firstUber = new UberX("AWS1010", new Account("Daniela", "DA12NI12ELA"), "Chevrolet", "Spark");
+$firstUber->setPassenger(4);
+echo $firstUber->getDataCar();
 echo "<br>";
 
 #UberPool Creation
@@ -27,7 +28,7 @@ echo $uberSecond->getDataCar();
 echo "<br>";
 
 #UberVan Creation
-$uberThird = new UberVan("AW12345", new Account("David", "DADA1010"), [], []);
+$uberThird = new UberVan("AW12345", new Account("David", "DADA1010"), ["Chevrolet",["Spark",2020]], ["Vinil"]);
 $uberThird->setPassenger(6);
 echo $uberThird->getDataCar();
 echo "<br>";

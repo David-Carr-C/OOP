@@ -20,7 +20,12 @@ class UberVan extends Car {
     }
 
     public function getDataCar() {
-        $parentData = parent::getDataCar();
-        return "$parentData, Passenger: $this->passenger";
+        if (parent::getDataCar()!="Error!" && $this->typeCarAccepted!=null && $this->seatsMaterial!=null){
+            $parentData = parent::getDataCar();
+            $typeCar = print_r($this->typeCarAccepted,true);
+            $seatsMat = implode(",",$this->seatsMaterial);
+            return "$parentData, Type-Car-Accepted: $typeCar, Seat-Material: $seatsMat";
+        }
+        return "Error!";
     }
 }

@@ -11,7 +11,11 @@ class UberX extends Car {
     }
 
     public function getDataCar() {
-        $parentData = parent::getDataCar();
-        return "$parentData, Brand: $this->brand, Model: $this->model";
+        if (parent::getDataCar()!="Error!" && $this->brand!=null && $this->model!=null) {
+            $parentData = parent::getDataCar();
+            return "$parentData, Brand: $this->brand, Model: $this->model";
+        } else {
+            return "Error!";
+        }
     }
 }
