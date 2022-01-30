@@ -1,2 +1,2 @@
 # OOP
-Object Oriented Programming on Php, Java, JavaScript, Python.
+Object Oriented Programming in Php, Java, JavaScript, Python.
